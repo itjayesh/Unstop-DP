@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       int n,sum=0;
+       n=sc.nextInt();
+       String s;
+       sc.nextLine();
+       s=sc.nextLine();
+       for(int i=0;i<n;i++)
+       {
+         char k=s.charAt(i);
+         if(k=='R'||k=='U')
+         sum+=1;
+         else if(k=='L'||k=='D')
+         sum+=-1;
+       }
+       if(sum==0)
+       System.out.println("YES");
+       else
+       System.out.println("NO");
+    }
+}
